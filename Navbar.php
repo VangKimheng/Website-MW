@@ -23,20 +23,15 @@
     body {
         font-family: 'Poppins', 'Battambang', 'Sriracha' ,sans-serif;
     }
-    /* Add this to your CSS */
-    .active-btn {
-        color: #FFC107; /* Yellow color */
-    }
-    
- 
+
 
 </style>
-<body class="bg-gray-100">
-    <nav class="">
-        <div class="container mx-auto xl:px-[60px] lg:px-[25px] md:px-[50px] px-[25px] flex justify-between items-center py-5 z-[20] bg-white shadow fixed min-w-full xl:h-[80px]">
+<body>
+<nav class="z-[20]">
+        <div class="container mx-auto xl:px-[60px] lg:px-[25px] md:px-[50px] px-[25px] flex justify-between items-center py-5 z-[30] bg-white shadow fixed min-w-full xl:h-[80px]">
             <!-- Left Side: Logo -->
             <div class="flex items-center">
-                <img src="img/logo.png" alt="School Logo" class="transition-all duration-300 xl:h-[45px] lg:h-[40px] md:h-[40px] h-[40px]">
+                <img src="./img/logo.png" alt="School Logo" class="transition-all duration-300 xl:h-[45px] lg:h-[40px] md:h-[40px] h-[40px]">
             </div>
     
             <!-- Center: Navigation Links -->
@@ -158,7 +153,7 @@
         </div>
         <!-- Mobile Menu Links -->
         <div class="lg:hidden">
-            <ul id="mobile-nav" class="absolute top-[-100%] z-[-2] transition-all duration-500 ease-in-out space-y-4 bg-white shadow py-[60px] px-10 overflow-y-auto max-h-[90vh] w-full">
+            <ul id="mobile-nav" class="fixed top-[-100%] z-[20] transition-all duration-500 ease-in-out space-y-4 bg-white shadow py-[60px] px-10 overflow-y-auto max-h-[90vh] w-full">
         
                 <!-- Search Box -->
                 <div class="relative flex justify-center items-center mb-4 w-full">
