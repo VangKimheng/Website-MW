@@ -31,7 +31,7 @@
         <div class="container mx-auto xl:px-[60px] lg:px-[25px] md:px-[50px] px-[25px] flex justify-between items-center py-5 z-[30] bg-white shadow fixed min-w-full xl:h-[80px]">
             <!-- Left Side: Logo -->
             <div class="flex items-center">
-                <img src="./img/logo.png" alt="School Logo" class="transition-all duration-300 xl:h-[45px] lg:h-[40px] md:h-[40px] h-[40px]">
+                <a href="index.php"><img src="img/logo.png" alt="School Logo" class="transition-all duration-300 xl:h-[45px] lg:h-[40px] md:h-[40px] h-[40px]"></a>
             </div>
     
             <!-- Center: Navigation Links -->
