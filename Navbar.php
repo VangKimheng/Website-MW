@@ -31,12 +31,12 @@
         <div class="container mx-auto xl:px-[60px] lg:px-[25px] md:px-[50px] px-[25px] flex justify-between items-center py-5 z-[30] bg-white shadow fixed min-w-full xl:h-[80px]">
             <!-- Left Side: Logo -->
             <div class="flex items-center">
-                <a href="index.php"><img src="img/logo.png" alt="School Logo" class="transition-all duration-300 xl:h-[45px] lg:h-[40px] md:h-[40px] h-[40px]"></a>
+                <a href="./index.php"><img src="img/logo.png" alt="School Logo" class="transition-all duration-300 xl:h-[45px] lg:h-[40px] md:h-[40px] h-[40px]"></a>
             </div>
     
             <!-- Center: Navigation Links -->
             <ul id="nav-links" class="hidden lg:flex items-center xl:space-x-6 space-x-4 xl:text-[1rem] lg:text-[14px] md:text-[0.6em] font-normal">
-                <li><a href="#" class=" hover:text-yellow-500">Home</a></li>
+                <li><a href="./index.php" class=" hover:text-yellow-500">Home</a></li>
     
                 <!-- About Us Dropdown -->
                 <li class="relative">
@@ -47,8 +47,8 @@
                         </svg>
                     </button>
                     <ul id="about-dropdown" class="absolute hidden bg-white border border-gray-200 w-[300px] mt-10 space-y-2 shadow py-5 px-1">
-                        <li><a href="#" class="block px-4 hover:text-yellow-500">Vision & Mission</a></li>
-                        <li><a href="#" class="block px-4 hover:text-yellow-500">Message From School President</a></li>
+                        <li><a href="./visionandmission.php" class="block px-4 hover:text-yellow-500">Vision & Mission</a></li>
+                        <li><a href="./messageFSP.php" class="block px-4 hover:text-yellow-500">Message From School President</a></li>
                     </ul>
                 </li>
     
@@ -69,11 +69,11 @@
                                 </svg>
                             </button>
                             <ul id="general-english-dropdown" class="absolute hidden bg-white border border-gray-200 w-[180px] space-y-2 shadow py-3 left-[260px] top-[-0px]">
-                                <li><a href="#" class="block px-4 hover:text-yellow-500">Kindergarten</a></li>
-                                <li><a href="#" class="block px-4 pt-2 hover:text-yellow-500">Primary</a></li>
-                                <li><a href="#" class="block px-4 pt-2 hover:text-yellow-500">Lower Secondary</a></li>
-                                <li><a href="#" class="block px-4 pt-2 hover:text-yellow-500">Secondary</a></li>
-                                <li><a href="#" class="block px-4 pt-2 hover:text-yellow-500">Part-Time Class</a></li>
+                                <li><a href="./kindergarten.php" class="block px-4 hover:text-yellow-500">Kindergarten</a></li>
+                                <li><a href="./primaryeg.php" class="block px-4 pt-2 hover:text-yellow-500">Primary</a></li>
+                                <li><a href="./lowersecondary.php" class="block px-4 pt-2 hover:text-yellow-500">Lower Secondary</a></li>
+                                <li><a href="./secondaryschool.php" class="block px-4 pt-2 hover:text-yellow-500">Secondary</a></li>
+                                <li><a href="./parttimeclass.php" class="block px-4 pt-2 hover:text-yellow-500">Part-Time Class</a></li>
                             </ul>
                         </li>
                         <li class="relative">
@@ -84,17 +84,17 @@
                                 </svg>
                             </button>
                             <ul id="general-khmer-dropdown" class="absolute hidden bg-white border border-gray-200 left-[260px] top-[-4px] w-[180px] space-y-2 shadow py-3">
-                                <li><a href="#" class="block px-4 hover:text-yellow-500">Kindergarten</a></li>
-                                <li><a href="#" class="block px-4 pt-2 hover:text-yellow-500">Primary School</a></li>
-                                <li><a href="#" class="block px-4 pt-2 hover:text-yellow-500">High School</a></li>
+                                <li><a href="./kindergartenkh.php" class="block px-4 hover:text-yellow-500">Kindergarten</a></li>
+                                <li><a href="./primarykh.php" class="block px-4 pt-2 hover:text-yellow-500">Primary School</a></li>
+                                <li><a href="./highschool.php" class="block px-4 pt-2 hover:text-yellow-500">High School</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
 
     
-                <li><a href="#" class="hover:text-yellow-500">Admission</a></li>
-                <li><a href="#" class="hover:text-yellow-500">Campuses</a></li>
+                <li><a href="./admission.php" class="hover:text-yellow-500">Admission</a></li>
+                <li><a href="./campuses.php" class="hover:text-yellow-500">Campuses</a></li>
     
                 <!-- News and Event Dropdown -->
                 <li class="relative">
@@ -105,12 +105,12 @@
                         </svg>
                     </button>
                     <ul id="news-dropdown" class="absolute hidden bg-white border border-gray-200 mt-10 w-[290px] space-y-2 shadow py-5 px-5">
-                        <li><a href="#" class="block hover:text-yellow-500">Local News and Events</a></li>
-                        <li><a href="#" class="block hover:text-yellow-500">International News and Events</a></li>
+                        <li><a href="./localnewsandevent.php" class="block hover:text-yellow-500">Local News and Events</a></li>
+                        <li><a href="./internationalnewsandevent.php" class="block hover:text-yellow-500">International News and Events</a></li>
                     </ul>
                 </li>
     
-                <li><a href="#" class="hover:text-yellow-500">Careers</a></li>
+                <li><a href="./career.php" class="hover:text-yellow-500">Careers</a></li>
     
                 <!-- Right Side: Language Dropdown and Search Icon -->
                 <div class="flex items-center space-x-4">
@@ -166,7 +166,7 @@
                 </div>
         
                 <!-- Home -->
-                <a href="#" >
+                <a href="./index.php" >
                 <li class="py-2 w-full hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px]">Home</li>
                 </a>
         
@@ -179,8 +179,8 @@
                         </svg>
                     </button>
                     <ul id="mobile-dropdown-about" class="hidden pl-4 space-y-4">
-                        <li><a href="#" class="block pt-5 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Vision & Mission</a></li>
-                        <li><a href="#" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Message From President</a></li>
+                        <li><a href="./visionandmission.php" class="block pt-5 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Vision & Mission</a></li>
+                        <li><a href="./messageFPS.php" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Message From President</a></li>
                     </ul>
                 </li>
         
@@ -202,11 +202,11 @@
                                 </svg>
                             </button>
                             <ul id="mobile-dropdown-general-english" class="hidden space-y-4 pl-6 pt-5 right-0">
-                                <li><a href="#" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Kindergarten</a></li>
-                                <li><a href="#" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Primary</a></li>
-                                <li><a href="#" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Lower Secondary</a></li>
-                                <li><a href="#" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Secondary</a></li>
-                                <li><a href="#" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Part-Time Class</a></li>
+                                <li><a href="./kindergarten.php" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Kindergarten</a></li>
+                                <li><a href="./primaryeg.php" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Primary</a></li>
+                                <li><a href="./lowersecondary.php" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Lower Secondary</a></li>
+                                <li><a href="./secondaryschool.php" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Secondary</a></li>
+                                <li><a href="./parttimeclass.php" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Part-Time Class</a></li>
                             </ul>
                         </li>
         
@@ -219,21 +219,21 @@
                                 </svg>
                             </button>
                             <ul id="mobile-dropdown-general-khmer" class="hidden space-y-4 pt-5 pl-6 right-0">
-                                <li><a href="#" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Kindergarten</a></li>
-                                <li><a href="#" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Primary School</a></li>
-                                <li><a href="#" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">High School</a></li>
+                                <li><a href="./kindergartenkh.php" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Kindergarten</a></li>
+                                <li><a href="./primarykh.php" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Primary School</a></li>
+                                <li><a href="./highschool.php" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">High School</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
         
                 <!-- Admission -->
-                <a href="#" class="">
+                <a href="./admission.php" class="">
                 <li class="pb-2 pt-6 border-b-[1px] w-full hover:text-yellow-500 hover:border-yellow-500">Admission</li>
                 </a>
                 
                 <!-- Campuses -->
-                <a href="#">
+                <a href="./campuses.php">
                 <li class="pb-2 pt-6 border-b-[1px] w-full hover:text-yellow-500 hover:border-yellow-500">Campuses</li>
                 </a>
         
@@ -246,13 +246,13 @@
                         </svg>
                     </button>
                     <ul id="mobile-dropdown-news" class="hidden space-y-4 pt-5 pl-4">
-                        <li><a href="#" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Local News</a></li>
-                        <li><a href="#" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Global News</a></li>
+                        <li><a href="./localnewsandevent.php" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Local News</a></li>
+                        <li><a href="./internationalnewsandevent.php" class="block pt-2 hover:text-yellow-500 hover:border-yellow-500 decoration-black border-b-[1px] py-2 ml-5">Global News</a></li>
                     </ul>
                 </li>
         
                 <!-- Careers -->
-                <a href="#">
+                <a href="./career.php">
                 <li class="pb-2 pt-6 border-b-[1px] w-full hover:text-yellow-500 hover:border-yellow-500">Careers</li>
                 </a>
             </ul>
