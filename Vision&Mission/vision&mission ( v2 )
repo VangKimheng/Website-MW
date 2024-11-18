@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision and Vission</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="./icon/logo.ico" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<style>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        margin: 0;
+    }
+
+    body {
+        font-family: 'Poppins', 'Battambang', 'Sriracha' ,sans-serif;
+        overflow-x: hidden; 
+    }
+
+
+    img {
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    p {
+      line-height: 1.625;
+    }
+
+    .wrapper-slider1{
+            position: relative;
+        }
+
+        .carousel1 .dragging {
+            scroll-behavior: auto;
+        }
+
+         .wrapper-slider1 .carousel1 {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: calc((100%) - 7px);
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scrollbar-width: 0;
+        }
+
+       .wrapper-slider1 .carousel1::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar in Firefox */
+        .wrapper-slider1 .carousel1 {
+            scrollbar-width: none; /* For Firefox */
+        }
+
+        /* For older versions of Firefox (optional) */
+        @-moz-document url-prefix() {
+        .wrapper-slider1 .carousel1 {
+                scrollbar-width: none;
+            }
+        }
+        .wrapper-slider1 .carousel1 .card {
+            scroll-snap-align: start;
+        }
+
+        @media screen and (max-width: 1023px) {
+            .wrapper-slider1 .carousel1 {
+                grid-auto-columns: 100%;
+            }
+        }
+        @media screen and (max-width: 710px) {
+            .wrapper-slider1 .carousel1 {
+                grid-auto-columns: 100%;
+            }
+        }
+        .indicators1, .indicatorsMb1, .indicators-img {
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .indicator1, .indicatorMb1, .indicator-img {
+            width: 12px;
+            height: 12px;
+            background-color: #ddd;
+            border-radius: 50%;
+            cursor: pointer;    
+        }
+
+        .indicator1.active, .indicatorMb1.active, .indicator-img.active {
+            background-color: #2B91C6;
+        }
+        //Top the Top
+        #progress{
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            display: none;
+        } 
+
+        #progress-value{
+            display: flex;
+            display: grid;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+</style>
+
+<body>
+    <?php include("./include/navbar.php") ?>
+
+    <!----To The Top----->
+    <div id="progress" class="fixed bottom-10 right-10 h-[70px] w-[70px] place-items-center rounded-full cursor-pointer z-[20]">
+        <span id="progress-value" class="rounded-full bg-white h-[calc(100%-15px)] w-[calc(100%-15px)] text-[35px] text-black grid place-items-center">
+        <ion-icon name="arrow-up-outline" class="text-2xl"></ion-icon>
+        </span>
+    </div>
+
+    <!--Header Section-->
+    <div class="relative mt-[80px]">
+
+        <!--Header Image-->
+        <img src="./img/whymws.jpg" alt="" class="mb-[-70px] xl:h-[500px] brightness-75 lg:w-full lg:h-[400px] md:h-[350px] mm:w-full w-full sm:w-full md:w-full mm:h-auto object-cover"/>
+        <!--Header text-->
+        <div class="absolute font-[ramaraja] inset-0 flex justify-center items-center text-white bottom-[50px] sm:text-3xl text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+            About Milky Way School
+        </div>
+
+        <!--Quotation-->
+        <div class="flex justify-center mt-[20px] xl:mt-[-60px] ">
+
+            <div class="bg-white z-[10] text-blue-800 md:p-10 p-5 md:mx-10 mx-6 shadow-lg text-center h-fit w-full 
+            text-[1rem] md:text-normal lg:h-[130px] md:text-[1.1rem] xl:text-2xl lg:text-xl xl:w-[1200px] xl:h-[150px] 
+            xl:pt-11 font-[ramaraja] font-light lg:leading-9">
+                "Milky Way School, a bridge between generations, preparing us for a
+                future where the stars are no longer a distant dream, but a playground
+                for the children of a thousand worlds."
+            </div>
+
+        </div>
+        <!--End of Quotation-->
+
+    </div>
+    <!--End of Header Section-->
+
+    <!--Body Section-->
+    <div class="px-[20px] flex mx-auto items-center justify-center mt-10 xl:mt-[100px] md:mt-[50px] space-x-7">
+
+      <!--Left Line-->
+      <div class="bg-black opacity-35 w-[100px] h-[1px] sm:w-[110px] md:w-[200px] lg:w-[300px] xl:w-[450px]"></div>
+
+      <!--Logo Image-->
+      <img src="./img/MW Logo (Official).png" alt="MW Logo" class="w-[60px] h-70 px-2 md:w-[80px] md:h-70 lg:w-[100px] lg:h-[90px] xl:h-[110px] xl:w-[130px] shrink-0"/>
+        
+      <!--Right Line-->
+      <div class="bg-black opacity-35 w-[100px] h-[1px] sm:w-[110px] md:w-[200px] lg:w-[300px] xl:w-[450px]"></div>  
+    </div>
+
+    <!--Our History-->
+    <div class="mt-[20px] xl:mt-[50px] flex justify-center items-center mx-auto">
+      <h1 class="text-[1.5rem] text-blue-800 font-[ramaraja] sm:text-xl md:text-2xl lg:text-2xl xl:text-4xl xl:mb-[30px]">
+        Our History
+      </h1>
+    </div>
+
+    <!--Paragraph about history-->
+      <div class="px-10 lg:px-[8rem] font-[350] text-center xl:text-[1rem] text-[0.9rem] leading-relaxed">
+        <h1>
+          Founded in 1915 and guided by our Catholic heritage, Canterbury is a
+          college preparatory, coeducational boarding and day school for students in
+          grades 9-12. The School prides itself on creating a community based on its
+          Five Values—Honesty, Respect, Compassion, Spirituality, and Self
+          Reliance—in which students and faculty forge lasting bonds and every
+          student experiences a broad and challenging program in a small school
+          setting. The School's educational environment fosters academic rigor,
+          athletic development, artistic enrichment, and spiritual growth, and
+          strives to ensure a superior experience that prepares students for leading
+          colleges and universities and for life.
+          </h1>
+
+        <!--Second Paragraph-->
+        <h1>
+          With its rigorous and humane approach to students, both in and out of the
+          classroom, Canterbury's program inculcates vital intellectual and ethical
+          habits of mind. The School sees all students as individuals, encourages
+          them as necessary, challenges them as appropriate, and inspires them to
+          become moral leaders in a complex, secular world.
+      </h1>
+      </div>
+    <!--End Of Paragraph about history-->
+
+    <!--Our Vision-->
+    <div class="flex justify-center pt-10 md:pt-[70px] pb-16 flex-col md:flex-row md:justify-between space-x-6 px-10 lg:px-20 leading-relaxed md:px-[90px]">
+
+      <!--Text Descriptions-->
+      <div class="xl:px-12">
+        <h1 class="font-[ramaraja] text-center text-blue-800 text-[1.5rem] md:text-2xl lg:text-2xl xl:text-4xl">
+          Our Vision
+        </h1>
+
+        <p class="font-[350] md:mt-2 text-center text-[0.9rem] xl:text-[1rem] leading-relaxed">
+          Students and adults at Canterbury live and learn as a close-knit
+          community and together create a climate of acceptance, understanding,
+          and belonging.
+          Students and adults at Canterbury live and learn as a close-knit
+          community and together create a climate of acceptance, understanding,
+          and belonging.
+        </p>
+
+        <div class="flex lg:hidden mt-7 flex-col md:gap-24 mr-14 mm:justify-items-center mm:flex-col mm:items-center mm:gap-5 mm:ml-[0px] mm:mr-[0px] xl:gap-16">
+          <img src="./img/stu1.jpg" alt="" class="md:h-[250px] md:w-[500px] mm:h-[150px] mm:w-[250px] lg:h-[250px] xl:w-[1200px] xl:h-[350px] object-cover rounded-md"/>
+        </div>
+        <h1 class="font-[ramaraja] pt-10 text-center text-blue-800 text-[1.5rem] md:text-2xl lg:text-2xl xl:text-3xl">
+          Honesty
+        </h1>
+
+        <p class="font-[350] text-center text-[0.9rem]  xl:text-[1rem] leading-relaxed">
+          Building character and courage to stay true to ourselves and others
+        </p>
+
+        <h1 class="font-[ramaraja] pt-7 text-center text-blue-800 text-[1.5rem] md:text-2xl lg:text-2xl xl:text-3xl">
+          Respect
+        </h1>
+
+        <p class="font-[350] text-center text-[0.9rem]  xl:text-[1rem] leading-relaxed">
+          Learning each other's stories and treating all with dignity
+        </p>
+        <div class="flex lg:hidden mt-7 flex-col md:gap-24 mr-14 mm:justify-items-center mm:flex-col mm:items-center mm:gap-5 mm:ml-[0px] mm:mr-[0px] xl:gap-16">
+          <img src="./img/stu2.jpg" alt="" class="md:h-[250px] md:w-[500px] mm:h-[150px] mm:w-[250px] lg:h-[250px] xl:w-[1200px] xl:h-[350px] object-cover rounded-md"/>
+        </div>
+
+        <h1 class="font-[ramaraja] pt-7 text-center text-blue-800 text-[1.5rem] md:text-2xl lg:text-2xl xl:text-3xl">
+          Compassion
+        </h1>
+
+        <p class="font-[350] text-center text-[0.9rem]  xl:text-[1rem] leading-relaxed">
+          Being fully and humbly present so that we may empathize with others
+        </p>
+        <h1 class="font-[ramaraja] pt-7 text-center text-blue-800 text-[1.5rem] md:text-2xl lg:text-2xl xl:text-3xl">
+          Spirituality
+        </h1>
+
+        <p class="font-[350] text-center text-[0.9rem]  xl:text-[1rem] leading-relaxed">
+          Being fully and humbly present so that we may empathize with others
+        </p>
+
+        <h1 class="font-[ramaraja] pt-7 text-center text-blue-800 text-[1.5rem] md:text-2xl lg:text-2xl xl:text-3xl">
+          Self-Reliance
+        </h1>
+
+        <p class="font-[350] mt-2 text-center text-[0.9rem] xl:text-[1rem] leading-relaxed">
+          Developing strength and independence to become intellectual and ethical leaders in a complex world
+        </p>
+
+      </div>
+      <!--End of Description-->
+
+      <!--Image-->
+      <div class="lg:flex lgitems-center lg:justify-center hidden flex-col md:gap-10 md:mb-[30px] md:pr-[40px] xl:gap-6">
+        <img src="./img/stu2.jpg" alt="" class="h-[250px] w-[250px] md:w-[1500px] xl:h-[300px] object-cover rounded-md"/>
+        <img src="./img/stu1.jpg" alt="" class="h-[250px] w-[250px] md:w-[1500px] xl:h-[300px] object-cover rounded-md"/>
+      </div>
+      <!--End of Image-->
+
+    </div>
+    <!--End of Our Vision-->
+
+    <!------------------------------Our Mission--------------------------------->
+    <section class="bg-[#F6F6F6] mt-5 xl:h-[700px] md:h-fit h-[950px] py-10 md:pb-20 md:px-28 px-10">
+
+      <div class="flex flex-col items-center justify-center px-0 md:px-16 xl:px-20">
+        <h1 class="text-[1.5rem] font-[ramaraja] text-blue-800 mm:mt-4 md:text-2xl lg:text-3xl xl:text-4xl">Our Mission</h1>
+
+        <p class= "font-[350] md:mt-2 text-center text-[0.9rem] xl:text-[1rem] leading-relaxed">
+          Students and adults at Canterbury live and learn as a close-knit community and together create a climate of acceptance,
+           understanding, and belonging. Students and adults at Canterbury live and learn as a close-knit community and together 
+           create a climate of acceptance, understanding, and belonging.
+      </p>
+    
+        
+        <div class="flex items-center justify-center relative mt-5">
+          <div class="wrapper-slider1 top-7 xl:max-w-[1000px] lg:max-w-[700px] md:max-w-[600px] max-w-[300px] w-[100%] mx-auto">
+
+              <ion-icon id="Left1" name="chevron-back-outline" class="slide-btn1 absolute bg-white xl:p-5 p-4 text-2xl text-center leading-[50px] cursor-pointer
+              rounded-full lg:left-[-80px] xl:top-[150px] lg:top-[120px] md:right-[80px] md:top-[-5%] right-[80px] top-[-15px] transform-translate-y-(-50%) shadow active:bg-gray-100 active:translate-y-1 transition-all duration-150" ></ion-icon>
+              
+              <ul class="carousel1 xl:gap-[15px] lg:gap-[10px] gap-[5px] lg:mt-5 mt-[4rem]">
+
+              <!------------------------------------ Card 1 ------------------------------------->
+                      <li class="card md:flex">
+                          <img src="img/stu1.jpg" alt="" class="xl:w-[850px] xl:h-[350px] lg:w-[300px] lg:h-[260px] md:w-[250px] md:h-[250px] w-[300px] h-[170px] object-cover" draggable="false">
+                          <!------------------------Description-------------------------->
+                          <div class="xl:w-[1100px] lg:w-[400px] xl:h-[350px] lg:h-[260px] md:w-[400px] md:h-[250px] h-[270px] w-[300px] bg-white border gap-5 xl:py-10 py-[20px] lg:px-10 px-5">
+                              <h1 class="xl:text-3xl lg:text-2xl text-[1.2rem] font-medium xl:py-3 py-3 font-[ramaraja] text-blue-800">Academic Excellence</h1>
+                              <p class="xl:text-[1rem] lg:text-[0.85rem] text-[0.9rem] font-[350] xl:pb-4 pb-2 leading-relaxed">
+                              Challenging Curriculum: We offer a robust and challenging curriculum that stimulates curiosity and encourages a deep understanding of various subjects.
+                              </p>
+                          </div>
+                      </li>
+
+              <!------------------------------------ Card 2 ------------------------------------->
+                      <li class="card md:flex">
+                          <img src="img/stu1.jpg" alt="" class="xl:w-[850px] xl:h-[350px] lg:w-[300px] lg:h-[260px] md:w-[250px] md:h-[250px] w-[300px] h-[170px] object-cover" draggable="false">
+                          <!------------------------Description-------------------------->
+                          <div class="xl:w-[1100px] lg:w-[400px] xl:h-[350px] lg:h-[260px] md:w-[400px] md:h-[250px] h-[270px] w-[300px] bg-white border gap-5 xl:py-10 py-[20px] lg:px-10 px-5">
+                              <h1 class="xl:text-3xl lg:text-2xl text-[1.2rem] font-medium xl:py-3 py-3 font-[ramaraja] text-blue-800">Holistic Development</h1>
+                              <p class="xl:text-[1rem] lg:text-[0.85rem] text-[0.9rem] font-[350] xl:pb-4 pb-2 leading-relaxed">
+                              With its rigorous and humane approach to students, both in and out of the classroom, Canterbury’s program inculcates vital intellectual and ethical habits of mind. The School 
+                              sees all studCharacter Building:</p>
+                          </div>
+                      </li>
+
+              <!------------------------------------ Card 3 ------------------------------------->
+                      <li class="card md:flex">
+                          <img src="img/stu1.jpg" alt="" class="xl:w-[850px] xl:h-[350px] lg:w-[300px] lg:h-[260px] md:w-[250px] md:h-[250px] w-[300px] h-[170px] object-cover" draggable="false">
+                          <!------------------------Description-------------------------->
+                          <div class="xl:w-[1100px] lg:w-[400px] xl:h-[350px] lg:h-[260px] md:w-[400px] md:h-[250px] h-[270px] w-[300px] bg-white border gap-5 xl:py-10 py-[20px] lg:px-10 px-5">
+                              <h1 class="xl:text-3xl lg:text-2xl text-[1.2rem] font-medium xl:py-3 py-3 font-[ramaraja] text-blue-800">Lifelong Learning</h1>
+                              <p class="xl:text-[1rem] lg:text-[0.85rem] text-[0.9rem] font-[350] xl:pb-4 pb-2 leading-relaxed">
+                              Encouraging Curiosity: We aim to instill a lifelong love for learning in our students, encouraging them to 
+                              continuously seek knowledge and personal growth.</p>
+                          </div>
+                      </li>
+
+              
+                  </ul>  
+
+                      <!--------------------------- Indicators for PC ------------------>
+                      <div class="indicators1 flex justify-center gap-2 lg:pt-5 transition-all duration-300 xl:mr-0 mx-auto">
+                          <span class="indicator1 active"></span>
+                          <span class="indicator1"></span>
+                          <span class="indicator1"></span>
+                      </div>
+                      
+                  <ion-icon id="Right1" name="chevron-forward-outline" class="slide-btn1 absolute bg-white xl:p-5 p-4 text-2xl text-center leading-[50px] cursor-pointer
+                  rounded-full lg:right-[-70px] xl:top-[150px] lg:top-[120px] md:top-[-5%] right-[5px] top-[-15px] transform-translate-y-(-50%) shadow active:bg-gray-100 active:translate-y-1 transition-all duration-150"></ion-icon>
+
+              </div>
+        </div>
+
+      </div>
+
+      </section>
+    <!------------------------End of Our Mission------------------------------>
+
+    <!------------------------Our Strategy Pillar----------------------------->
+  <section class="lg:pt-20 lg:pb-[7rem] md:pb-[5rem] py-10 lg:px-[10rem] px-10">
+
+  <div class="flex flex-col items-center justify-center">
+    <h1 class="text-[1.5rem] font-[ramaraja] text-blue-800 mm:mt-4 md:text-2xl lg:text-3xl xl:text-4xl">Our Strategy Pillar</h1>
+    <p class= "font-[350] mt-2 text-center text-[0.9rem] xl:text-[1rem] leading-relaxed">
+      At Milky Way School, our commitment to excellence and innovation is guided by a set of strategic pillars.
+      These pillars represent the core areas where we focus our efforts to achieve our long-term vision and deliver value to our customers, employees, and stakeholders.
+    </p>
+  </div>
+
+  <!-------------------------------md & Laptop------------------------------------------->
+    <div class="flex flex-col space-y-10 justify-center text-center md:text-start items-center mt-[60px]">
+        <div class="flex md:flex-row flex-col items-center md:items-start md:space-x-10 justify-center max-w-[500px] md:max-w-[700px] lg:max-w-[1100px]">
+          <img src="./img/student1.jpg" alt="" class="lg:w-[270px] lg:h-[210px] md:w-[250px] md:h-[200px] w-[370px] h-[210px] object-cover">
+            <div>
+              <h1 class="md:text-2xl text-[1.5rem] font-[ramaraja] text-blue-800 md:mt-0 mt-5">
+                Customer Experience
+              </h1>
+              <p class= "font-[350] md:text-start text-center text-[0.9rem] xl:text-[1rem] py-2">
+                We believe that exceptional customer service is the cornerstone of our success. 
+                Our goal is to exceed customer expectations at every touch point by providing superior products and personalized experiences.
+              </p>
+            </div>
+        </div>
+      
+        <div class="flex md:flex-row flex-col items-center md:items-start md:space-x-10 justify-center max-w-[500px] md:max-w-[700px] lg:max-w-[1100px]">
+          <img src="./img/student1.jpg" alt="" class="lg:w-[270px] lg:h-[210px] md:w-[250px] md:h-[200px] w-[370px] h-[210px] object-cover">
+            <div>
+              <h1 class="md:text-2xl text-[1.5rem] font-[ramaraja] text-blue-800 md:mt-0 mt-5">
+                Innovation
+              </h1>
+              <p class= "font-[350] md:text-start text-center text-[0.9rem] xl:text-[1rem] py-2">
+                AtInnovation is at the heart of our strategy. We are committed to exploring new technologies, 
+                developing cutting-edge solutions, and staying ahead of industry trends to ensure we meet the evolving needs of our customers.
+            </div>
+        </div>
+      
+        <div class="flex md:flex-row flex-col items-center md:items-start md:space-x-10 justify-center max-w-[500px] md:max-w-[700px] lg:max-w-[1100px]">
+          <img src="./img/student1.jpg" alt="" class="lg:w-[270px] lg:h-[210px] md:w-[250px] md:h-[200px] w-[370px] h-[210px] object-cover">
+            <div>
+              <h1 class="md:text-2xl text-[1.5rem] font-[ramaraja] text-blue-800 md:mt-0 mt-5">
+                Operational Excellence
+              </h1>
+              <p class= "font-[350] md:text-start text-center text-[0.9rem] xl:text-[1rem] py-2">
+                Operational excellence means delivering our products and services with the highest level of efficiency and quality.
+                We continuously optimize our processes to ensure we are operating at peak performance and delivering value.
+            </div>
+        </div>
+    </div>
+
+  </section>
+<!------------------------End of Our Strategy Pillar---------------------->
+
+
+    <script src="scripts/navbar.js"></script>
+
+    <script>
+    const carousel1 = document.querySelector(".carousel1");
+    const arrowBtns1 = document.querySelectorAll(".wrapper-slider1 .slide-btn1");
+    const firstCardWidth1 = carousel1.querySelector(".card").offsetWidth; 
+    const indicators1 = document.querySelectorAll('.indicator1');
+    
+    let currentIndex1 = 0;
+    let isAutoScrolling1 = false; // Prevents unnecessary updates during smooth scroll
+
+    const updateIndicators1 = () => {
+        indicators1.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex1);
+        });
+    }
+
+    const updateCurrentIndexBasedOnScroll = () => {
+        if (!isAutoScrolling1) {
+            currentIndex1 = Math.round(carousel1.scrollLeft / firstCardWidth1);
+            updateIndicators1();
+        }
+    };
+
+    arrowBtns1.forEach(btn => {
+        btn.addEventListener("click", () => {
+            isAutoScrolling1 = true;
+            if (btn.id === "Left1") {
+                currentIndex1 = (currentIndex1 - 1 + indicators1.length) % indicators1.length;
+            } else {
+                currentIndex1 = (currentIndex1 + 1) % indicators1.length;
+            }
+
+            carousel1.scrollTo({
+                left: firstCardWidth1 * currentIndex1,
+                behavior: "smooth"
+            });
+
+            updateIndicators1();
+            setTimeout(() => { isAutoScrolling1 = false; }, 300); // Reset after scroll animation
+        });
+    });
+
+    indicators1.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            isAutoScrolling1 = true;
+            currentIndex1 = index;
+            carousel1.scrollTo({
+                left: firstCardWidth1 * currentIndex1,
+                behavior: "smooth"
+            });
+            updateIndicators1();
+            setTimeout(() => { isAutoScrolling1 = false; }, 300);
+        });
+    });
+
+    // Update index on manual scroll
+    carousel1.addEventListener('scroll', updateCurrentIndexBasedOnScroll);
+</script>
+
+    <script src="to_the_top.js"></script>
+
+</body>
+
+<?php include("./include/footer.php") ?>
+</html>
