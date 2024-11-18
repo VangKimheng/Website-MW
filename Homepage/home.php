@@ -58,7 +58,7 @@
          .wrapper-slider1 .carousel1 {
             display: grid;
             grid-auto-flow: column;
-            grid-auto-columns: calc((100% / 3) - 7px);
+            grid-auto-columns: calc((100% / 3) - 10px);
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
@@ -324,16 +324,6 @@
         }
     }
 
-    @media screen and (max-width: 425px) {
-        .bg-campus {
-            background-size: 580px;
-        }
-    }
-    @media screen and (max-width: 376px) {
-        .bg-campus {
-            background-size: 550px;
-        }
-    }
     //Top the Top
     #progress{
         box-shadow: 0 0 10px rgba(0, 0, 0, 1);
@@ -835,14 +825,13 @@ the willingness to learn is a choice” </pre>
 
 <!-----------------------------------Visit Campus ------------------------->
 <section>
-    <div class="h-[280px] ml:h-[280px] xxl:h-[600px] lg:h-[400px] overflow-hidden w-full">
-            <div class="bg-campus relative h-full bg-[url('img/student-cp.jpg')] bg-cover bg-center bg-no-repeat p-10">
-            <div class="absolute inset-0 bg-gradient-to-l from-black/80 via-black/10 to-transparent"></div>
-                <div class="sm:left-[160px] xxl:left-[800px] xxl:top-[100px] lg:left-[570px] absolute">
+    <div class="h-[280px] md:h-[280px] xl:h-[450px] lg:h-[350px] text-end overflow-hidden w-full relative">
+            <div class="bg-campus relative h-full bg-[url('./img/SP.png')] bg-cover bg-center bg-no-repeat p-10">
+                <div class="right-[30px] md:right-[100px] xl:right-[120px] lg:top-[80px] lg:right-[100px] absolute">
                     <h1 class="text-2xl xxl:text-5xl lg:text-3xl font-semibold text-white">Take the Next Step</h1>
-                    <p class="py-5 text-[0.90rem] pr-3 md:pr-0 md:text-[0.90rem] text-white xxl:text-xl">At Milky Way School, we value diversity and inclusivity.
-                        <br>Our school is a melting pot of cultures.</p>
-                    <button class="text-white text-xs xxl:text-[1.05rem] lg:text-[0.90rem] font-light bg-yellow-500 md:ml-0 ml-[90px] px-6 py-[12px] lg:px-[30px] lg:py-[15px] rounded-sm mt-[15px] md:mt-[20px]">
+                    <p class="py-5 text-[0.90rem] pl-[200px] lg:pl-[900px] md:text-[0.90rem] text-white xxl:text-xl">At Milky Way School, we value diversity and inclusivity.
+                        Our school is a melting pot of cultures.</p>
+                    <button class="text-white text-xs xl:text-[1.05rem] lg:text-[0.90rem] font-light bg-yellow-500 md:ml-0 ml-[90px] px-6 py-[12px] lg:px-[30px] lg:py-[15px] rounded-sm mt-[15px] md:mt-[10px]">
                         Visit Campus</button>
                 </div>
             </div>
@@ -942,14 +931,13 @@ the willingness to learn is a choice” </pre>
 </section>
 
 <script>
-    // First slider functionality
-    const carousel1 = document.querySelector(".carousel1");
+   const carousel1 = document.querySelector(".carousel1");
     const arrowBtns1 = document.querySelectorAll(".wrapper-slider1 .slide-btn1");
     const firstCardWidth1 = carousel1.querySelector(".card").offsetWidth; 
     const indicators1 = document.querySelectorAll('.indicator1');
-    const indicatorsMb1 = document.querySelectorAll('.indicator-mb1');
-
+    
     let currentIndex1 = 0;
+    let isAutoScrolling1 = false; // Prevents unnecessary updates during smooth scroll
 
     const updateIndicators1 = () => {
         indicators1.forEach((dot, index) => {
@@ -957,66 +945,112 @@ the willingness to learn is a choice” </pre>
         });
     }
 
+    const updateCurrentIndexBasedOnScroll = () => {
+        if (!isAutoScrolling1) {
+            currentIndex1 = Math.round(carousel1.scrollLeft / firstCardWidth1);
+            updateIndicators1();
+        }
+    };
+
     arrowBtns1.forEach(btn => {
         btn.addEventListener("click", () => {
-            carousel1.scrollLeft += btn.id === "Left1" ? -firstCardWidth1 : firstCardWidth1;
-            
+            isAutoScrolling1 = true;
             if (btn.id === "Left1") {
-                currentIndex1 = Math.max(currentIndex1 - 1, 0);
+                currentIndex1 = (currentIndex1 - 1 + indicators1.length) % indicators1.length;
             } else {
-                currentIndex1 = Math.min(currentIndex1 + 1, indicators1.length - 1);
+                currentIndex1 = (currentIndex1 + 1) % indicators1.length;
             }
 
+            carousel1.scrollTo({
+                left: firstCardWidth1 * currentIndex1,
+                behavior: "smooth"
+            });
+
             updateIndicators1();
+            setTimeout(() => { isAutoScrolling1 = false; }, 300); // Reset after scroll animation
         });
     });
 
     indicators1.forEach((dot, index) => {
         dot.addEventListener('click', () => {
+            isAutoScrolling1 = true;
             currentIndex1 = index;
-            carousel1.scrollLeft = firstCardWidth1 * currentIndex1;
+            carousel1.scrollTo({
+                left: firstCardWidth1 * currentIndex1,
+                behavior: "smooth"
+            });
             updateIndicators1();
+            setTimeout(() => { isAutoScrolling1 = false; }, 300);
         });
     });
 
-    // Second slider functionality
+    // Update index on manual scroll
+    carousel1.addEventListener('scroll', updateCurrentIndexBasedOnScroll);
+
+    // Second slider functionality with smooth scrolling and synchronized indicators
     const carousel2 = document.querySelector(".carousel2");
     const arrowBtns2 = document.querySelectorAll(".wrapper-slider2 .slide-btn2");
     const firstCardWidth2 = carousel2.querySelector(".card").offsetWidth; 
     const indicators2 = document.querySelectorAll('.indicator2');
 
-    let currentIndex3 = 0;
+    let currentIndex2 = 0;
+    let isAutoScrolling2 = false; // Prevents unnecessary updates during smooth scroll
 
     const updateIndicators2 = () => {
         indicators2.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex3);
+            dot.classList.toggle('active', index === currentIndex2);
         });
-    }
+    };
 
+    const updateCurrentIndexBasedOnScroll2 = () => {
+        if (!isAutoScrolling2) {
+            currentIndex2 = Math.round(carousel2.scrollLeft / firstCardWidth2);
+            updateIndicators2();
+        }
+    };
+
+    // Arrow button functionality with smooth scroll
     arrowBtns2.forEach(btn => {
         btn.addEventListener("click", () => {
-            carousel2.scrollLeft += btn.id === "Left2" ? -firstCardWidth2 : firstCardWidth2;
-            
+            isAutoScrolling2 = true;
             if (btn.id === "Left2") {
-                currentIndex3 = Math.max(currentIndex3 - 1, 0);
+                currentIndex2 = (currentIndex2 - 1 + indicators2.length) % indicators2.length;
             } else {
-                currentIndex3 = Math.min(currentIndex3 + 1, indicators2.length - 1);
+                currentIndex2 = (currentIndex2 + 1) % indicators2.length;
             }
 
+            carousel2.scrollTo({
+                left: firstCardWidth2 * currentIndex2,
+                behavior: "smooth"
+            });
+
             updateIndicators2();
+            setTimeout(() => { isAutoScrolling2 = false; }, 300); // Reset after scroll animation
         });
     });
 
+    // Indicator click functionality with smooth scroll
     indicators2.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            currentIndex3 = index;
-            carousel2.scrollLeft = firstCardWidth2 * currentIndex3;
+            isAutoScrolling2 = true;
+            currentIndex2 = index;
+            carousel2.scrollTo({
+                left: firstCardWidth2 * currentIndex2,
+                behavior: "smooth"
+            });
             updateIndicators2();
+            setTimeout(() => { isAutoScrolling2 = false; }, 300);
         });
     });
 
+    // Update index based on manual scroll
+    carousel2.addEventListener('scroll', updateCurrentIndexBasedOnScroll2);
 
-   // Image slider functionality
+
+
+
+
+   // Image slider functionality with looping and synchronized indicators
     const carouselImg = document.querySelector(".carousel-img");
     const arrowBtnimg = document.querySelectorAll(".img-wrapper .img-btn");
     const firstCardWidth3 = carouselImg.querySelector(".img-card").offsetWidth;
@@ -1024,47 +1058,53 @@ the willingness to learn is a choice” </pre>
 
     let currentIndexImg = 0;
     let autoSlideInterval;
+    let isAutoScrollingImg = false; // Prevents indicator updates during smooth scrolling
 
     // Function to update active indicator dots
     const updateIndicators3 = () => {
         indicators3.forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndexImg);
         });
-    }
+    };
 
-    // Function to slide the carousel
+    // Function to slide the carousel with looping functionality
     const slideCarouselImg = (direction) => {
+        isAutoScrollingImg = true;
+        
         if (direction === 'next') {
-            currentIndexImg = Math.min(currentIndexImg + 1, indicators3.length - 1);
+            currentIndexImg = (currentIndexImg + 1) % indicators3.length;
         } else {
-            currentIndexImg = Math.max(currentIndexImg - 1, 0);
+            currentIndexImg = (currentIndexImg - 1 + indicators3.length) % indicators3.length;
         }
-        carouselImg.scrollLeft = firstCardWidth3 * currentIndexImg;
+        
+        carouselImg.scrollTo({
+            left: firstCardWidth3 * currentIndexImg,
+            behavior: "smooth"
+        });
+        
         updateIndicators3();
-    }
+        setTimeout(() => { isAutoScrollingImg = false; }, 300); // Allow smooth scroll to finish
+    };
 
     // Auto-slide functionality
     const startAutoSlide = () => {
         autoSlideInterval = setInterval(() => {
-            if (currentIndexImg < indicators3.length - 1) {
-                slideCarouselImg('next');
-            } else {
-                currentIndexImg = -1; // Reset to start
-            }
+            slideCarouselImg('next');
         }, 3000); // Slide every 3 seconds
-    }
+    };
 
+    // Reset auto-slide on manual interaction
     const resetAutoSlide = () => {
-        clearInterval(autoSlideInterval); // Stop the current interval
-        startAutoSlide(); // Start a new one
-    }
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    };
 
-    // Event listeners for arrow buttons
+    // Event listeners for arrow buttons with auto-slide reset
     arrowBtnimg.forEach(btn => {
         btn.addEventListener("click", () => {
             const direction = btn.id === "Leftimg" ? 'prev' : 'next';
             slideCarouselImg(direction);
-            resetAutoSlide(); // Reset auto-slide when user manually clicks
+            resetAutoSlide();
         });
     });
 
@@ -1072,14 +1112,18 @@ the willingness to learn is a choice” </pre>
     indicators3.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             currentIndexImg = index;
-            carouselImg.scrollLeft = firstCardWidth3 * currentIndexImg;
+            carouselImg.scrollTo({
+                left: firstCardWidth3 * currentIndexImg,
+                behavior: "smooth"
+            });
             updateIndicators3();
-            resetAutoSlide(); // Reset auto-slide when user manually clicks a dot
+            resetAutoSlide();
         });
     });
 
     // Start the auto-slide
     startAutoSlide();
+
 
 </script>
 <script src="to_the_top.js"></script>
