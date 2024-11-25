@@ -695,17 +695,17 @@
             <img src="img/teacher.png" alt="" class="xxl:h-[600px] lg:h-[500px] md:h-[400px] ml:h-[250px] h-[230px] w-auto transform scale-x-[-1]">
         </div>
     <div class="absolute lg:top-[120px] md:top-[80px] top-[40px] xl:right-[150px] lg:right-[100px] ml:right-[10px] right-[5px]">
-    <img src="img/q-frame.png" alt="" class="xl:h-[400px] lg:h-[310px] md:h-[280px] md:w-auto h-[210px] ml:w-[270px] w-[250px]">
-    <pre class="xl:text-2xl lg:text-lg md:text-[1.05rem] text-[0.90rem] font-thin font-['Kalam'] text-gray-700 xl:mt-[-250px] xxl:ml-[80px] lg:ml-[60px] lg:mt-[-200px] md:mt-[-180px] md:ml-[48px]
-    mt-[-140px] ml:ml-[40px] ml-[25px]">“ The Capacity to learn is a gift, 
+        <img src="img/q-frame.png" alt="" class="xl:h-[400px] lg:h-[310px] md:h-[280px] md:w-auto h-[210px] ml:w-[270px] w-[250px]">
+            <pre class="xl:text-2xl lg:text-lg md:text-[1.05rem] text-[0.90rem] font-thin font-['Kalam'] text-gray-700 xl:mt-[-250px] xxl:ml-[80px] lg:ml-[60px] lg:mt-[-200px] md:mt-[-180px] md:ml-[48px]
+            mt-[-140px] ml:ml-[40px] ml-[25px]">“ The Capacity to learn is a gift, 
     the ability to learn is a skill,
-the willingness to learn is a choice” </pre>    
-</div>
+the willingness to learn is a choice” </pre> 
+    </div>
 </section>
 
 
 <!--------------Student Activty----------------->
-<section class="w-full overflow-y-hidden xxl:h-[700px] lg:h-[630px] md:h-[700px] bg-gray-100 xxl:px-[120px] lg:px-[50px] md:px-[50px] pl-[40px] pr-[10px] md:py-20 py-10 items-center justify-center">
+<section class="w-full overflow-y-hidden lg:h-[630px] md:h-[700px] bg-gray-100 xxl:px-[120px] lg:px-[50px] md:px-[50px] pl-[40px] pr-[10px] md:py-20 py-10 items-center justify-center">
     <div> 
         <div class="grid md:grid-cols-2 grid-col-1 xxl:gap-[500px] lg:gap-[300px] md:gap-[100px] ">
             <div>
@@ -826,10 +826,10 @@ the willingness to learn is a choice” </pre>
 <!-----------------------------------Visit Campus ------------------------->
 <section>
     <div class="h-[280px] md:h-[280px] xl:h-[450px] lg:h-[350px] text-end overflow-hidden w-full relative">
-            <div class="bg-campus relative h-full bg-[url('./img/SP.png')] bg-cover bg-center bg-no-repeat p-10">
-                <div class="right-[30px] md:right-[100px] xl:right-[120px] lg:top-[80px] lg:right-[100px] absolute">
+            <div class="bg-campus relative h-full bg-[url('./img/SP.png')] bg-cover bg-[-17rem_0rem] w-full md:bg-center bg-no-repeat p-10">
+                <div class="right-[20px] md:right-[100px] xl:right-[120px] lg:top-[80px] lg:right-[100px] absolute">
                     <h1 class="text-2xl xxl:text-5xl lg:text-3xl font-semibold text-white">Take the Next Step</h1>
-                    <p class="py-5 text-[0.90rem] pl-[200px] lg:pl-[900px] md:text-[0.90rem] text-white xxl:text-xl">At Milky Way School, we value diversity and inclusivity.
+                    <p class="py-5 text-[0.90rem] pl-[150px] lg:pl-[900px] md:text-[0.90rem] text-white xxl:text-xl">At Milky Way School, we value diversity and inclusivity.
                         Our school is a melting pot of cultures.</p>
                     <button class="text-white text-xs xl:text-[1.05rem] lg:text-[0.90rem] font-light bg-yellow-500 md:ml-0 ml-[90px] px-6 py-[12px] lg:px-[30px] lg:py-[15px] rounded-sm mt-[15px] md:mt-[10px]">
                         Visit Campus</button>
@@ -855,7 +855,7 @@ the willingness to learn is a choice” </pre>
 </section>
 
 <!-------------------------------------Campus Map------------------------------->
-<section class="grid lg:grid-cols-2 grid-cols-1 lg:h-fit md:h-[150vh] ">
+<section class="grid lg:grid-cols-2 grid-cols-1 lg:h-fit h-auto">
     <div class="relative">
         <div>
             <img src="img/bg-map.jpg" class="xxl:h-[600px] xxl:w-[1000px] lg:h-[500px] lg:w-[100%] md:h-[900px] w-full mm:h-[350px] h-[400px]" alt="">
@@ -898,9 +898,9 @@ the willingness to learn is a choice” </pre>
 </section>
 
 <!-----------------------------------News and Event------------------------------------->
-<section class="xxl:h-[150vh] bg-white">
-    <div class="xl:flex xl:flex-col-2 flex-row lg:py-[100px] md:py-[50px] py-[50px] xxl:px-[80px] lg:px-[100px] md:px-[50px] px-[50px] justify-center xl:space-x-[2rem] md:space-y-0 space-y-[2rem]">
-        <div class="text-nowrap leading-tight ml-[-50px]">
+<section class=" bg-white h-fit md:mt-10 lg:mt-0 px-10">
+    <div class="xl:flex xl:flex-col-2 flex-row lg:py-[100px] md:py-[50px] py-[50px] xxl:px-[80px] lg:px-[100px] justify-center xl:space-x-[2rem] md:space-y-0 space-y-[2rem]">
+        <div class="text-nowrap leading-tight xl:ml-[-50px]">
             <h1 class="xxl:text-[2.8rem] lg:text-[2.1rem] md:text-[1.9rem] text-[2rem] text-black">News and Events</h1>
             <span class="text-yellow-400 xxl:text-[1.2rem] lg:text-[0.90rem] md:text-[0.85rem] text-[0.90rem]">News and events inform and entertain</span>
         </div>
@@ -926,7 +926,6 @@ the willingness to learn is a choice” </pre>
         </div>
     </div>
 
-    <?php include("include/footer.php");?>
 
 </section>
 
@@ -1128,6 +1127,9 @@ the willingness to learn is a choice” </pre>
 </script>
 <script src="to_the_top.js"></script>
 
+<?php include("include/footer.php");?>
+
 </body>
+
 
 </html>
