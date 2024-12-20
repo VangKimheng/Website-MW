@@ -349,31 +349,34 @@
 <div class="">
 
 <!-------------------------Header----------------------->
-<section class="relative w-full h-[560px] max-ml:h-[560px] md:h-[480px] lg:h-[600px] xl:h-[700px] xxl:h-[750px] bg-cover bg-center md:bg-[url('img/bg-2.png')] max-ml:bg-white">
+<section class="relative w-full h-[560px] max-ml:h-[560px] md:h-[480px] lg:h-[600px] xl:h-[700px] bg-cover bg-center bg-white">
 
         <!-------------------------Video----------------------->
-        <div class="absolute z-10 top-[80px] md:top-[130px] md:right-[40px] xxl:top-[150px] lg:right-[80px] xl:right-[80px]">
-            <video src="video/v1.mp4" class="w-screen h-[300px] sm:h-[300px] md:w-[400px] md:h-[300px] lg:w-[500px] lg:h-[380px] xl:w-[600px] xl:h-[450px] xxl:w-[650px] xxl:h-[480px] object-cover" autoplay loop muted playsinline></video>
-        </div>
+        <div class="relative z-10">
+    <video
+        src="video/v1.mp4"
+        class="w-screen xl:h-[700px] object-cover"
+        autoplay
+        loop
+        muted
+        playsinline
+    ></video>
+    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+</div>
 
 
             <!-------------------------Head-Line----------------------->
-            <div class="chrome-margin absolute md:left-0 left-5 top-[300px] ml:top-[320px] md:top-[170px] pl-2 md:pl-[40px] lg:pl-[70px] lg:top-[190px] xxl:top-[210px] z-[10]">
-                <h1 class="text-2xl md:text-2xl lg:text-3xl xl:text-[2.8rem] xxl:text-5xl font-normal text-white md:text-black">WELCOME TO</h1>
-                <h1 class="text-2xl md:text-2xl lg:text-3xl xl:text-[2.8rem] xxl:text-5xl font-normal text-white md:text-black lg:pt-1">MILKY WAY SCHOOL</h1>
-            </div>
-            <!----------------------Description-------------------------->
-            <div class="absolute md:left-0 left-5 pt-[400px] pl-2 md:p-[40px] lg:pl-[70px] py-5 md:py-0 md:bottom-[170px] lg:top-[270px] xxl:top-[350px]">
-            <img src="img/Register-01.png" class="h-[20px] md:h-[20px] lg:h-[23px] xl:h-[30px]">
+            <div class="chrome-margin absolute px-[70px] z-[10] bottom-[20px] bg-black bg-opacity-0 py-10">
+                <h1 class="text-4xl font-normal text-white ">Milky Way School</h1>
+                <h1 class="text-2xl font-normal text-yellow-500 ">“A Better Venue of Pride and Trust”</h1>
 
-                <p class="text-black opacity-[80%] text-[0.90rem] pt- pr-11 md:pr-[500px] md:text-[0.80rem] lg:text-sm lg:pr-[620px] xl:pr-[800px] xl:text-lg xxl:text-xl xxl:pr-[970px]">Start on April 29, 2024 and have a special discount
-                for this month's registration.</p>
+            <!----------------------Description-------------------------->
+            <div class="mt-5">
+                <p class="text-white xl:text-[1rem] font-light">Start on April 29, 2024 and have a special discount
+                Ignite your child's potential at Milky Way School, where we serve the top education standard and system both Khmer General Education and 
+                General English Program. Our dynamic curriculum, professional and well-qualified teachers, high standard and modern facilities, and a 
+                strong emphasis on character development foster students’ potential through critical thinking, creativity, problem-solving and global awareness.</p>
             </div>
-            <!----------------------Button-------------------------->
-            <div class="absolute md:left-0 left-5 pl-2 top-[490px] ml:top-[500px] md:top-[340px] md:pl-[40px] lg:top-[380px] lg:pl-[70px] xl:top-[400px] xxl:top-[490px]">
-                <button class="bg-[#2B91C6] rounded-sm px-6 py-[12px] md:py-[13px] lg:px-[33px] lg:py-[18px] text-xs lg:text-[0.80rem] xl:text-[0.95rem] xxl:text-[0.95rem] font-light  text-white hover:bg-[#2278a6] transition-all duration-200" >
-                    Learn More
-                </button>
             </div>
         </div>
     </section>
@@ -398,38 +401,20 @@
                 <div class="hidden md:block">
                     <img src="icon/Who we are.svg" class="h-[15px] lg:h-[22px] xxl:h-[25px]">
                     <h1 class="text-lg md:text-2xl lg:text-3xl xxl:text-4xl font-normal pt-1 text-nowrap text-black">Why Milky Way School?</h1>
-                    <p class="text-[0.85rem] md:text-[0.80rem] lg:text-[0.95rem] xl:text-lg font-normal pt-2 xxl:pt-4 text-gray-700">At Milky Way School, we value diversity and inclusivity. Our school is a melting pot of cultures, where students from different backgrounds come together to learn and grow.    </p>
+                    <p class="text-[0.85rem] md:text-[0.80rem] lg:text-[0.95rem] xl:text-lg font-light pt-2 xxl:pt-4">Milky Way School creates a stimulated 
+                        learning environment and offers comprehensive curriculums which empower a strong foundation of general knowledge and living, and a rigorous English 
+                        as a second language preparing to explore the world with global opportunities. The experienced and dedicated teachers share a great pedagogy and 
+                        competency knowledge and organize varieties of cooperative learning.</p>
                 </div>
             <!---------------------------Why MWS Table------------------------->
                 <div class="pt-2 lg:pt-5 items-center mt-2 pl-2 md:pl-0 md:relative">
-                    <ul class="grid md:grid-cols-2 grid-cols-1 text-wrap mm:text-nowrap">
-                        <li class="flex items-center w-[150px]">
-                            <img src="icon/tick.png" class="h-[12px] lg:h-[15px] ">
-                            <p class="text-[0.76rem] md:text-[0.75rem] lg:text-[0.95rem] xl:text-lg font-normal pt-2 text-gray-700 ml-2 mb-[5px]">School Recognition</p>
-                        </li>
-                        <li class="flex items-center w-[150px]">
-                            <img src="icon/tick.png" class="h-[12px] lg:h-[15px] ">
-                            <p class="text-[0.76rem] md:text-[0.75rem] lg:text-[0.95rem] xl:text-lg font-normal pt-2 text-gray-700 ml-2 mb-[5px]">High Quality of Education</p>
-                        </li>
-                        <li class="flex items-center w-[150px]">
-                            <img src="icon/tick.png" class="h-[12px] lg:h-[15px] ">
-                            <p class="text-[0.76rem] md:text-[0.75rem] lg:text-[0.95rem] xl:text-lg font-normal pt-2 text-gray-700 ml-2 mb-[5px]">School Discipline</p>
-                        </li>
-                        <li class="flex items-center w-[150px]">
-                            <img src="icon/tick.png" class="h-[12px] lg:h-[15px] ">
-                            <p class="text-[0.76rem] md:text-[0.75rem] lg:text-[0.95rem] xl:text-lg font-normal pt-2 text-gray-700 ml-2 mb-[5px]">Caring Service</p>
-                        </li>
-                        <li class="flex items-center w-[150px]">
-                            <img src="icon/tick.png" class="h-[12px] lg:h-[15px] ">
-                            <p class="text-[0.76rem] md:text-[0.75rem] lg:text-[0.95rem] xl:text-lg font-normal pt-2 text-gray-700 ml-2 mb-[5px]">Affordable Tuition and Fee</p>
-                        </li>
-                    </ul>
+
                 
                     
                         <!----------------------Button-------------------------->
-                        <div class="md:absolute md:flex hidden mt-8 md:bottom-[-55%] lg:bottom-[-70%] md:ml-[0px] xxl:bottom-[-70%]">
+                        <div class="md:absolute md:flex hidden">
                             <button class="bg-[#2B91C6] rounded-sm px-6 py-[12px] md:py-[13px] lg:px-[33px] lg:py-[18px] text-xs lg:text-[0.80rem] xxl:text-[0.95rem] font-light  text-white hover:bg-[#2278a6] text-nowrap transition-all duration-200" >
-                                Learn More
+                                Explore More
                             </button>
                         </div>
             </div>
@@ -695,9 +680,8 @@
             <img src="img/teacher.png" alt="" class="xxl:h-[600px] lg:h-[500px] md:h-[400px] ml:h-[250px] h-[230px] w-auto transform scale-x-[-1]">
         </div>
     <div class="absolute lg:top-[120px] md:top-[80px] top-[40px] xl:right-[150px] lg:right-[100px] ml:right-[10px] right-[5px]">
-        <img src="img/q-frame.png" alt="" class="xl:h-[400px] lg:h-[310px] md:h-[280px] md:w-auto h-[210px] ml:w-[270px] w-[250px]">
-            <pre class="xl:text-2xl lg:text-lg md:text-[1.05rem] text-[0.90rem] font-thin font-['Kalam'] text-gray-700 xl:mt-[-250px] xxl:ml-[80px] lg:ml-[60px] lg:mt-[-200px] md:mt-[-180px] md:ml-[48px]
-            mt-[-140px] ml:ml-[40px] ml-[25px]">“ The Capacity to learn is a gift, 
+        <img src="img/shape.png" alt="" class=" xl:w-[500px] md:w-auto ml:w-[270px] w-[250px] object-cover">
+            <pre class="xl:text-2xl lg:text-lg md:text-[1.05rem] text-[0.90rem] font-thin font-['Kalam'] text-gray-700 xl:mt-[0px] lg:ml-[60px]">“ The Capacity to learn is a gift, 
     the ability to learn is a skill,
 the willingness to learn is a choice” </pre> 
     </div>
